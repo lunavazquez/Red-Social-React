@@ -1,0 +1,45 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+
+}
+
+button.btn.register {
+background-color: #f33959;
+border-radius: 15px;
+margin: 0 auto;
+padding: 10px 40px;
+text-align: center;
+}
+
+
+.Login{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  height: 100vh;
+
+}
+
+.Login-box{
+  display: flex;
+  flex-direction: column;
+}
+
+/* .card-content{
+  display: flex !important;
+  flex-direction: column;
+} */
+
+.card{
+  height: 600px;
+  width: 500px;
+}
+
+.registro{
+  height: 600px;
+  width: 500px;
+  text-align: center;
+  padding: auto;
+}
