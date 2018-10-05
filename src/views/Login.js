@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-import FacebookLogin from 'react-facebook-login'
-import GoogleLogin from 'react-google-login'
 import { Redirect, Link } from 'react-router-dom'
 import { Button, Input } from 'react-materialize'
+import FacebookLogin from 'react-facebook-login'
+import GoogleLogin from 'react-google-login'
 
-import './index.css'
-import 'materialize-css/dist/css/materialize.min.css'
+import './login.css';
+// import './index.css'
+// import 'materialize-css/dist/css/materialize.min.css'
 
 class Login extends Component {
   constructor() {
@@ -19,6 +20,13 @@ class Login extends Component {
     this.responseGoogle = this.responseGoogle.bind(this);
     this.onFailure = this.onFailure.bind(this);
   }
+
+  // componentWillMount() {
+  //   if (localStorage.getItem("fbData") || localStorage.getItem("googleData")) {
+  //     this.state({ isLogged: true });
+  //   }
+  // }
+
 
   responseFacebook(response) {
     // console.log(response)
@@ -34,6 +42,7 @@ class Login extends Component {
   }
 
   responseGoogle(response) {
+    //  guardar en localStorage
     localStorage.setItem("googleData", JSON.stringify({
       token: response.token,
       email: response.profileObj.email,
@@ -71,16 +80,14 @@ class Login extends Component {
     }
 
     return (
-      <div className="Login">
+      <div className="Login body-background">
         <div className="Login-box">
-          {/* <div className="card"> */}
-          {/* <CardPanel s={10} className="card teal lighten-5 black-text"> */}
-          <form onSubmit={this.onHandleLogin}>
-            <Input type="email" label="Email" s={10} ref="login-email" />
-            <Input type="password" label="password" s={10} ref="login-password" />
-            <Button className=" register btn-large" > Login </Button>
-            <Link className="register btn-large" to={'/Register'}> Registro</Link>
-          </form>
+          <h1 className="title center">Red social</h1>
+          <Input type="email" label="Email" s={10} ref="login-email" />
+          <Input type="password" label="password" s={10} ref="login-password" />
+          <Button waves="light" large={true} onClick={this.onHandleLogin}>
+            Iniciar sesión
+          </Button>
           <br></br>
           <FacebookLogin
             appId="334348797311987"
@@ -98,7 +105,6 @@ class Login extends Component {
           {/* <i className="fa fa-facebook" aria hidden="true"></i> */}
           {/* </button> */}
           <br></br>
-
           <GoogleLogin
             clientId="958939502997-ooe2tdhlcimkhkobf6ge76ttirhvsjkp.apps.googleusercontent.com"
             autoLoad={false}
@@ -108,11 +114,10 @@ class Login extends Component {
             <i className="fab fa-google"></i>
             <span>Iniciar Sesion</span>
           </GoogleLogin>
-
-
-
+          <br />
+          <Link to="/register" className="center">Crea tu cuenta</Link>
         </div>
-      </div >
+      </div>
     );
   }
 }

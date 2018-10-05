@@ -22,6 +22,20 @@
   font-size: large;
 }
 
+.body-background {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ebe9f9+0,ebe9f9+44,c1bfea+100 */
+  background: #ebe9f9; /* Old browsers */
+  background: -moz-linear-gradient(left, #ebe9f9 0%, #ebe9f9 44%, #c1bfea 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #ebe9f9 0%,#ebe9f9 44%,#c1bfea 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #ebe9f9 0%,#ebe9f9 44%,#c1bfea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe9f9', endColorstr='#c1bfea',GradientType=1 ); /* IE6-9 */
+}
+
+.title {
+  font-family: 'Cormorant Upright', serif;
+}
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

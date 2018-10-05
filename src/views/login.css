@@ -1,0 +1,12 @@
+.Login{
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  height: 100vh;
+
+}
+
+.Login-box{
+  display: flex;
+  flex-direction: column;
+}

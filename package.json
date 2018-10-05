@@ -1,6 +1,7 @@
 {
   "name": "red-social-react",
   "version": "0.1.0",
+  "homepage": "https://lunavazquez.github.io/Red-Social-React",
   "private": true,
   "dependencies": {
     "materialize-css": "^1.0.0",
@@ -16,12 +17,15 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "set HTTPS=true&&react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   }
 }

@@ -1,0 +1,14 @@
+.register {
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.register-container {
+  height: 600px;
+  width: 500px;
+  text-align: center;
+  margin: 0 auto;
+}
